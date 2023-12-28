@@ -6,4 +6,4 @@
 
 * For now I have compared two approaches with a more direct parameterization of the LV model. The PYMC model took 2.5 minutes to sample 4 chains of 1000, while the turing model took 1m20s, however the turing mode was doing the chains in serial not parallel as in the pymc mode.
 
-* Another issue i found is that dealing with thanos tensors and such can be a pain. I was not able to implement the protection against negative values in the pyhton case, but some the sampling would sometimes crash.  In Julia this was trivial.
+* Another issue i found is that dealing with pytensor and such can be a pain. For example, in Julia, to implement a "log if positive" function, I could just define the function in teh most straightforward way. In PYMC, I had to use special PyTensor functions to make this happen. On the other hand, it might not have been for the PYMC version.
