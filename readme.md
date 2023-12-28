@@ -5,3 +5,5 @@
 * For the Julia part, don't forget to `activate turingTest` and `instantiate` (https://pkgdocs.julialang.org/v1/environments/)
 
 * For now I have compared two approaches with a more direct parameterization of the LV model. The PYMC model took 2.5 minutes to sample 4 chains of 1000, while the turing model took 1m20s, however the turing mode was doing the chains in serial not parallel as in the pymc mode.
+
+* Another issue i found is that dealing with thanos tensors and such can be a pain.
